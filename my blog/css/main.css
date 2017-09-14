@@ -1,0 +1,400 @@
+/*@import url( http://fonts.googleapis.com/css?family=Dosis:400,500,600,700,800,300,200 );*/
+
+body {
+    color: rgb(255, 255, 255);
+    line-height: 26px;
+    font-family: "Dosis", sans-serif;
+    font-size: 16px;
+}
+
+body {
+    background: linear-gradient(90deg, rgb(100, 145, 115) 10%, rgb(219, 213, 164) 90%);
+}
+
+.preloader {
+    background: linear-gradient(90deg, rgb(100, 145, 115) 10%, rgb(219, 213, 164) 90%);
+}
+
+h1 {
+    color: rgb(255, 255, 255) !important;
+}
+
+h2 {
+    color: rgb(255, 255, 255) !important;
+}
+
+h3 {
+    color: rgb(255, 255, 255) !important;
+}
+
+h4 {
+    color: rgb(255, 255, 255) !important;
+}
+
+h5 {
+    color: rgb(255, 255, 255) !important;
+}
+
+h6 {
+    color: rgb(255, 255, 255) !important;
+}
+
+ul {
+    list-style: none;
+    padding: 0px;
+}
+
+a {
+    transition: color 400ms, background-color 400ms;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    -webkit-transition: color 400ms, background-color 400ms;
+}
+
+a:focus {
+    color: rgba(255, 255, 255, 0.5);
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgba(255, 255, 255, 0.5);
+    text-decoration: none;
+}
+
+.preloader {
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    position: fixed;
+    z-index: 999999;
+}
+
+.preloader > i {
+    left: 50%;
+    top: 50%;
+    width: 36px;
+    height: 36px;
+    line-height: 36px;
+    font-size: 36px;
+    margin-top: -15px;
+    margin-left: -15px;
+    display: inline-block;
+    position: absolute;
+}
+
+#header {
+    left: 0px;
+    top: 90px;
+    width: 100%;
+    height: 100px;
+    border-bottom-color: rgba(255, 255, 255, 0.1);
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    position: absolute;
+    z-index: 9999;
+}
+
+#header .container {
+    height: 100px;
+    display: table;
+}
+
+#header .container-inner {
+    vertical-align: middle;
+    display: table-cell;
+}
+
+#header .logo h1 {
+    margin: 0px;
+}
+
+#header .nav-button {
+    text-transform: uppercase;
+    margin-top: 10px;
+    display: inline-block;
+}
+
+#navigation {
+    background: rgba(255, 255, 255, 0.8);
+    left: 0px;
+    top: 0px;
+    text-align: center;
+    right: 0px;
+    bottom: 0px;
+    display: none;
+    position: absolute;
+    z-index: 99999;
+}
+
+.main-nav {
+    width: 400px;
+    display: inline-block;
+    position: relative;
+    background-color: rgb(255, 255, 255);
+}
+
+.main-nav ul {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+.main-nav ul li {
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+    display: block;
+}
+
+.main-nav ul li a {
+    color: rgb(94, 94, 94);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 36px;
+    font-weight: 700;
+    border-top-color: rgb(245, 245, 245);
+    border-top-width: 1px;
+    border-top-style: solid;
+    display: block;
+}
+
+.main-nav ul li:first-child a {
+    border-top-color: currentColor;
+    border-top-width: 0px;
+    border-top-style: none;
+}
+
+.main-nav ul li:hover a {
+    color: rgb(153, 153, 153);
+    background-color: rgb(51, 51, 51);
+}
+
+.main-nav ul li.active a {
+    color: rgb(153, 153, 153);
+    background-color: rgb(51, 51, 51);
+}
+
+#hidemenu {
+    top: -30px;
+    right: -30px;
+    color: rgb(102, 102, 102);
+    display: inline-block;
+    position: absolute;
+}
+
+#hidemenu:hover {
+    color: rgb(0, 0, 0);
+}
+
+.copyrights {
+    height: 0px;
+    line-height: 0;
+    text-indent: -9999px;
+    overflow: hidden;
+    font-size: 0px;
+}
+
+#home-page .caption {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+#home-page h2.heading {
+    font-size: 60px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+#page-slider > .carousel-inner {
+    height: 100%;
+}
+
+#page-slider .item > .container {
+    height: 100%;
+}
+
+#page-slider .item > .container {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+}
+
+.vertical-middle {
+    width: 100%;
+    height: 100%;
+    display: table;
+}
+
+.vertical-middle > div {
+    vertical-align: middle;
+    display: table-cell;
+}
+
+#welcome-page {
+    margin-top: 130px;
+}
+
+#page-slider .item {
+    background-position: 50%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.welcome-page-left {
+    left: 20px;
+}
+
+.welcome-page-right {
+    right: 20px;
+}
+
+.welcome-page-left {
+    top: 300px;
+    font-size: 57px;
+    margin-top: -35px;
+    position: absolute;
+    z-index: 10;
+}
+
+.welcome-page-right {
+    top: 300px;
+    font-size: 57px;
+    margin-top: -35px;
+    position: absolute;
+    z-index: 10;
+}
+
+.page-header {
+    padding: 0px;
+    border: 0px currentColor;
+    border-image: none;
+    line-height: 64px;
+    font-size: 64px;
+    font-weight: 700;
+    margin-top: 0px;
+    margin-bottom: 100px;
+}
+
+.entry-title {
+    line-height: 30px;
+    font-size: 24px;
+    font-weight: 700;
+
+}
+.entry-title p{
+    font-size: 16px;
+}
+.overlay-container {
+    display: block;
+    position: relative;
+}
+
+.overlay {
+    transition: opacity 400ms;
+    left: 0px;
+    top: 0px;
+    text-align: center;
+    right: 0px;
+    bottom: 0px;
+    position: absolute;
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    -webkit-transition: opacity 400ms;
+}
+
+.overlay-container:hover .overlay {
+    opacity: 1;
+}
+
+a.readmore {
+    line-height: 36px;
+    font-size: 36px;
+}
+
+.box {
+    background: rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    transition: background-color 400ms;
+    -webkit-transition: background-color 400ms;
+}
+
+.box:hover {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+#footer {
+    margin: 30px 0px;
+}
+
+.btn {
+    border-radius: 0px;
+    border: 0px currentColor;
+    transition: color 400ms, background-color 400ms;
+    border-image: none;
+    -webkit-transition: color 400ms, background-color 400ms;
+}
+
+.btn-transparent.btn {
+    background: rgba(0, 0, 0, 0.5);
+    color: rgb(255, 255, 255);
+}
+
+.btn-transparent.btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+    color: rgb(255, 255, 255);
+}
+
+input[type='text'].form-control {
+    background: none;
+    border-radius: 0px;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-image: none;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+}
+
+input[type='email'].form-control {
+    background: none;
+    border-radius: 0px;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-image: none;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+}
+
+input[type='password'].form-control {
+    background: none;
+    border-radius: 0px;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-image: none;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+}
+
+input[type='url'].form-control {
+    background: none;
+    border-radius: 0px;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-image: none;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+}
+
+textarea.form-control {
+    background: none;
+    border-radius: 0px;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-image: none;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+}
+
+:-ms-input-placeholder.form-control {
+    color: rgba(255, 255, 255, 0.8);
+}

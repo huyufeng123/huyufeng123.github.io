@@ -9,7 +9,7 @@
     export default{
         data(){
             return{
-                logeImg:"../../img/alogo.png"
+                logeImg:"img/alogo.png"
             }
         }
     }

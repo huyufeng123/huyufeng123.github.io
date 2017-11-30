@@ -61,7 +61,7 @@
                 lies:[
                     
                     {id:0,
-                     mainImg1:"../../img/orange.jpg",
+                     mainImg1:"img/orange.jpg",
                      icon1:true,
                      icon2:true,
                      text3:"美伦达 赣南脐橙 2017新上市 3斤装 铂金果",
@@ -73,7 +73,7 @@
                      text9:"删除"},
                     
                     {id:1,
-                     mainImg1:"../../img/blueberry.jpg",
+                     mainImg1:"img/blueberry.jpg",
                      icon1:false,
                      icon2:true,
                      text3:"Camposol 秘鲁进口精选蓝莓  单盒约125g 新鲜水果",
@@ -85,7 +85,7 @@
                      text9:"删除"},
                     
                     {id:2,
-                     mainImg1:"../../img/mango.jpg",
+                     mainImg1:"img/mango.jpg",
                      icon1:false,
                      icon2:true,
                      text3:"欢乐果园 广西青皮芒果 2个装 单果约260g以上 新鲜水果",
@@ -97,7 +97,7 @@
                      text9:"删除"},
                     
                     {id:3,
-                     mainImg1:"../../img/pear.jpg",
+                     mainImg1:"img/pear.jpg",
                      icon1:false,
                      icon2:true,
                      text3:"爱奇果 新疆库尔勒香梨 约2.5kg 当季新果 特级装 单果约120-",
@@ -109,7 +109,7 @@
                      text9:"删除"},
                     
                     {id:4,
-                     mainImg1:"../../img/apple.jpg",
+                     mainImg1:"img/apple.jpg",
                      icon1:false,
                      icon2:true,
                      text3:"宏辉果蔬 苹果 烟台红富士12个 单果约75mm 总重约2.1kg 新鲜",

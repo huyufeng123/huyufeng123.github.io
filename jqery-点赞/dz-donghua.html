@@ -1,0 +1,56 @@
+                        <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>点赞特效</title>
+</head>
+<style>
+    @keyframes dong{
+        0%{background-position: left;}
+        100%{background-position: right;}
+    }
+    
+    .out{width: 500px;border: 1px solid #888; padding: 20px; margin:50px auto;}
+    .btn1{vertical-align: middle;width: 100px;height: 100px;display: inline-block; background:url(img/1.png) no-repeat;margin-right:20px;}
+    .btn b {vertical-align: middle;}
+    .out .btn1.on{animation: dong 1s forwards steps(28,start );}
+</style>
+<body>
+    <div class="out">
+        <div class="row">
+            <h2>朋友圈的标题</h2>
+            <p>内容摘要内容摘要内容摘要内容摘要内容摘要内容摘要内容摘要内容摘要内容摘要内容摘要内容摘要</p>
+            <div class="btn"><i class="btn1" data-key="on"></i><b>11</b></div>
+        </div>
+        <div class="row">
+            <h2>朋友圈的标题</h2>
+            <p>内容摘要内容摘要内容摘要内容摘要内容摘要内容摘要内容摘要内容摘要内容摘要内容摘要内容摘要</p>
+            <div class="btn"><i class="btn1" data-key="on"></i><b>11</b></div>
+        </div>
+        <div class="row">
+            <h2>朋友圈的标题</h2>
+            <p>内容摘要内容摘要内容摘要内容摘要内容摘要内容摘要内容摘要内容摘要内容摘要内容摘要内容摘要</p>
+            <div class="btn"><i class="btn1" data-key="on"></i><b>11</b></div>
+        </div>
+    </div>
+<script type="text/javascript" src="jquery/jquery-1.11.1.js"></script>
+<script>
+    $(function(){
+        $(".btn1").click(function(){
+            
+            if($(this).attr("data-key")=="on"){
+                $(this).addClass("on");
+                var num =Number($(this).next().text())+1;
+                $(this).next().text(num);
+                $(this).attr("data-key","")
+            }else{
+                $(this).removeClass("on");
+                var num =Number($(this).next().text())-1;
+                $(this).next().text(num);
+                $(this).attr("data-key","on")
+            }
+        })
+    })
+</script>
+</body>
+</html>

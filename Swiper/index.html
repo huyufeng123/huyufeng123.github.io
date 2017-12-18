@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+</head>
+<link rel="stylesheet" href="Swiper-4.0.5/dist/css/swiper.min.css">
+<link rel="stylesheet" href="css/animate.css">
+<style>
+    html,body {
+        position: relative;
+        height: 100%;
+    }
+    
+    body {
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        color: #000;
+        margin: 0;
+        padding: 0;
+    }
+    .swiper-container {
+        width: 100%;
+        height: 100%;
+    } 
+    .swiper-slide {
+        text-align: center;
+        font-size: 50px;
+        background: url(img/5.jpg) no-repeat;
+        overflow: hidden;
+        /*上下左右居中*/
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    /*音乐*/
+    .music{
+        position: absolute;
+        left: 94%;
+        top: 3%; 
+        z-index: 10;
+    }
+    .music #m-b{
+        background: url(img/4.png) no-repeat;
+        background-size: 50px 50px;
+        width: 50px;
+        height: 50px;  
+    }
+    .animat{
+        animation: music1 1.5s infinite linear;
+    }
+    .music .m-s{
+        z-index: 5;    
+    }
+    .music .m-s img{
+        width: 60px;
+        position: relative;
+        left: 25px;
+        top: -50px;
+    }
+    
+    /*动画图片*/
+    .big img{
+        position: absolute;
+        display: block;
+    }
+    .big img:nth-of-type(1){
+        left: -6%;
+        top:-70px;
+    }
+    .big img:nth-of-type(2){
+        left: 72%;
+        width: 500px;
+        top:-8%;
+    }
+    
+    .big img:nth-of-type(3){
+        left: 75%;
+        width: 400px;
+        top:45%;
+    }
+    .big img:nth-of-type(4){
+        left:0%;
+        width: 100%;
+        text-align: center;
+        top:5%;
+    }
+    
+    /*下一页*/
+    .swiper-button-next{
+        top: 93%;
+        left: 50%;
+        right: auto;
+        margin: -13.5px;
+        background: url(img/7.png) no-repeat;
+        background-size: 70px;
+        position: absolute;
+        width: 70px;
+        margin-left: -35px;
+        height: 50px;
+        animation:arrow 1.5s infinite linear;
+    }
+    .dg{
+        position: relative;
+        top: 15%;
+    }
+    .text h2{
+        font-size: 22px;
+        padding-top: 100px;
+    }
+    .text h3{
+        font-size: 18px;
+        margin-top: -5px;
+        margin-bottom: -5px;
+    }
+    .text p{
+        font-size: 16px;
+    }
+    .text .jian{
+        position: absolute;
+        width: 500px;
+        left: 34%;
+        line-height: 50px;
+        text-align: left;
+        top: 35%;
+        text-indent: 2em;
+    }
+    .text .jian1{
+        text-indent: 2em;
+    }
+    .text .jie{
+        position: absolute;
+        top: -1%;
+        line-height: 36px;
+        width: 200px;
+        font-size: 24px;
+    }
+    .text .jie,.text .jie1,.text .jie2{
+        left: 43%;
+    }
+    .text .jie3{
+        left: 44%;
+        top: -2%;
+    }
+    #map{
+        margin-left: 54px;
+        width: 500px;
+        height: 400px;
+    }
+    .tupian{
+        width: 450px;
+        position: absolute;
+        top: 55%;
+        left: 35%;
+    }
+    @keyframes music1{
+        100%{
+            transform:rotate(360deg);
+        }
+    }
+    @keyframes arrow{
+        from{
+            margin-top: -5px;
+            opacity: 1;
+        }
+        to{
+          margin-top: -25px;  
+            opacity: .1;
+        }
+    }
+    @media(max-width:1200px){
+        .big img:nth-of-type(4){
+            position: absolute;
+            left:-0%;
+            width: 100%;
+            text-align: center;
+            top:15%;
+            display: block;
+        }
+    }
+    @media(max-width:1000px){
+        .big img:nth-of-type(4){
+            position: absolute;
+            left:-0%;
+            width: 100%;
+            text-align: center;
+            top:25%;
+            display: block;
+        }
+    }
+    @media(max-width:720px){
+        .swiper-button-next{
+            background-size: 50px;
+            top:95%;
+            width: 50px;
+            margin-left: -25px;
+        }
+        .music{
+            position: absolute;
+            left: 83%;
+            top: 3%; 
+            z-index: 5;
+        }
+        .music #m-b{
+            background: url(img/4.png) no-repeat;
+            background-size: 40px 40px;
+            width: 40px;
+            height: 40px;
+        }
+        .animat{
+            animation: music1 1.5s infinite linear;
+        }
+        .music .m-s{
+            z-index: 20;
+        }
+        .music .m-s img{
+            left: 15px;
+            top: -40px;
+        }
+        big img{
+            position: absolute;
+        }
+        .big img:nth-of-type(1){
+            width: 400px;
+            left: -50%;
+            top:-65px;
+        
+        }
+        .big img:nth-of-type(2){
+            
+            left: 62%;
+            width: 500px;
+            top:-15%;
+        }
+
+        .big img:nth-of-type(3){
+            left: 35%;
+            width: 250px;
+            top:60%;
+        }
+        .big img:nth-of-type(4){
+            position: absolute;
+            left:-28%;
+            width: 900px;
+            text-align: center;
+            top:15%;
+        }
+        .text{
+            color: #222;
+            width: 100%;
+        }
+        .text .jian{
+            padding-left: 35px;
+            padding-right:35px;
+            position: absolute;
+            width: 300px;
+            left: 0%;
+            line-height: 40px;
+            text-align: left;
+            top: 25%;
+            text-indent: 2em;
+        }
+        .text .jian1{
+            text-indent: 2em;
+        }
+        .text .jie{
+            position: absolute;
+            top: -1%;
+            left: 38%;
+            line-height: 36px;
+            width: 200px;
+            font-size: 24px;
+        }
+        .text .jie1,.text .jie2{
+            left: 34%;
+        }
+        .text .jie3{
+            left: 35%;
+            top: -2%;
+        }
+        .text h2{
+            font-size: 20px;
+            padding-top: 80px;
+        }
+        .text p{
+            font-size: 16px;
+        }
+        #map{
+            margin-left: 54px;
+            width:70%;
+            height:200px;
+            border:#ccc solid 1px;
+            font-size:12px;
+        }
+        .tupian{
+            width: 300px;
+            position: absolute;
+            top: 55%;
+            left: 10%;
+        }
+    }
+    @media(max-width:400px){
+        .big img:nth-of-type(4){
+            left:-40%;
+            width: 800px;
+            top:18%;
+        }
+    }
+</style>
+
+<body>
+    <div class="swiper-container">
+        <div class="music">
+           <div id="m-b" class="animat">
+           </div>
+           <div class="m-s">
+               <img src="img/1.gif">
+           </div>
+           <div class="video">
+               <video loop="loop" autoplay="autoplay" src="video/music.mp3"></video>
+           </div>
+           
+        </div>
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+               <div class="big">
+                   <img class="ani" swiper-animate-effect="bounceInLeft" swiper-animate-duration="1s" swiper-animate-delay="0.1s" src="img/1.png" alt="">
+                   <img class="ani" swiper-animate-effect="bounceInRight" swiper-animate-duration="1s" swiper-animate-delay="0.9s" src="img/2.png" alt="">
+                   <img class="ani" swiper-animate-effect="zoomInRight" swiper-animate-duration="2s" swiper-animate-delay="1.5s" src="img/3.png" alt="">
+                   <img class="ani" swiper-animate-effect="bounceInDown" swiper-animate-duration="1.5s" swiper-animate-delay="2s" src="img/6.png" alt="">
+               </div>
+               <div class="ani text dg" swiper-animate-effect="tada" swiper-animate-duration="1s" swiper-animate-delay="3s">
+                  <h2>盛邦升华泊头职业学院培训基地</h2>
+                  <h3>盛邦升华——双向选择洽谈会</h3>    
+                  <p><strong>2017.12.23</strong></p>
+                  <p><strong>诚邀您的到来</strong></p>  
+               </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="big">
+                   <img class="ani" swiper-animate-effect="bounceInLeft" swiper-animate-duration="1s" swiper-animate-delay="0.1s" src="img/1.png" alt="">
+                   <img class="ani" swiper-animate-effect="bounceInRight" swiper-animate-duration="1s" swiper-animate-delay="0.9s" src="img/2.png" alt="">
+                   <img class="ani" swiper-animate-effect="zoomInRight" swiper-animate-duration="2s" swiper-animate-delay="1.5s" src="img/3.png" alt="">
+               </div>
+               <div class="text">
+                  <h2 class="ani jie" swiper-animate-effect="flip" swiper-animate-duration="1s" swiper-animate-delay=".1s">2017盛邦升华泊头学院双选会</h2>
+                  <p class="ani jian" swiper-animate-effect="zoomIn" swiper-animate-duration="1s" swiper-animate-delay="1s">2017年盛邦升华泊头学院双选会12月23号在泊头职业学院拉开帷幕，此次双选会邀请了沧州的二十多家公司，让就业生与单位相互选择，“双选会”的举行可以给双方更多面对面的机会。实现学校和企业的共赢！
+                  </p>
+               </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="big">
+                   <img class="ani" swiper-animate-effect="bounceInLeft" swiper-animate-duration="1s" swiper-animate-delay="0.1s" src="img/1.png" alt="">
+                   <img class="ani" swiper-animate-effect="bounceInRight" swiper-animate-duration="1s" swiper-animate-delay="0.9s" src="img/2.png" alt="">
+                   <img class="ani" swiper-animate-effect="zoomInRight" swiper-animate-duration="2s" swiper-animate-delay="1.5s" src="img/3.png" alt="">
+               </div>
+               <div class="text">
+                  <h2 class="ani jie jie1" swiper-animate-effect="flip" swiper-animate-duration="1s" swiper-animate-delay=".1s">学校简介</h2>
+                   <p class="ani jian jian1" swiper-animate-effect="zoomIn" swiper-animate-duration="1s" swiper-animate-delay="1s">泊头职业学院是一所富有光荣革命传统的历史名校，其前身为1925年9月建校，有“沧州黄埔”之誉的河北泊头师范学校。盛邦升华与泊头职业学院深度合作，计算机网络技术专业共建共管，让职业学院的招生与企业的招工结合，学生培养与企业员工培训结合，学生见习与企业员工试用结合。
+                   </p>
+               </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="big">
+                   <img class="ani" swiper-animate-effect="bounceInLeft" swiper-animate-duration="1s" swiper-animate-delay="0.1s" src="img/1.png" alt="">
+                   <img class="ani" swiper-animate-effect="bounceInRight" swiper-animate-duration="1s" swiper-animate-delay="0.9s" src="img/2.png" alt="">
+                   <img class="ani" swiper-animate-effect="zoomInRight" swiper-animate-duration="2s" swiper-animate-delay="1.5s" src="img/3.png" alt="">
+               </div>
+               <div class="text">
+                  <h2 class="ani jie jie2" swiper-animate-effect="flip" swiper-animate-duration="1s" swiper-animate-delay=".1s">IT一员</h2>
+                   <p class="ani jian jian2" swiper-animate-effect="zoomIn" swiper-animate-duration="1s" swiper-animate-delay="1s">
+                       我叫胡玉凤，是个性格开朗、思维活跃的年轻人，就像八九点的太阳，朝气蓬勃、勤奋好学,敢于挑战困难。我相信我可以做到更好！
+                   </p>
+                   <img class="ani tupian" swiper-animate-effect="rotateIn" swiper-animate-duration="1s" swiper-animate-delay="2s" src="img/8.jpg" alt="">
+               </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="big">
+                   <img class="ani" swiper-animate-effect="bounceInLeft" swiper-animate-duration="1s" swiper-animate-delay="0.1s" src="img/1.png" alt="">
+                   <img class="ani" swiper-animate-effect="bounceInRight" swiper-animate-duration="1s" swiper-animate-delay="0.9s" src="img/2.png" alt="">
+                   <img class="ani" swiper-animate-effect="zoomInRight" swiper-animate-duration="1s" swiper-animate-delay="1.5s" src="img/3.png" alt="">
+               </div>
+               <div class="text">
+                  <h2 class="ani jie jie3" swiper-animate-effect="flip" swiper-animate-duration="1s" swiper-animate-delay=".1s">我的地图</h2>
+                  <div id="map"></div> 
+               </div>
+            </div>
+        </div>
+        <!-- 如果需要分页器 -->
+        <div class="swiper-pagination"></div>
+        <!-- 如果需要导航按钮 -->
+        
+        <div class="swiper-button-next">
+            <img src="" alt="">
+        </div>
+        <!-- 如果需要滚动条 -->
+        <div class="swiper-scrollbar"></div>
+    </div>
+    <!--导航等组件可以放在container之外-->
+    <script src="Swiper-4.0.5/dist/js/swiper.min.js"></script>
+    <script src="js/swiper.animate1.0.2.min.js"></script>
+    <script type="text/javascript" src="https://api.map.baidu.com/api?v=2.0&ak=ek56ib7vlmLbQv2qxcv7NFez3CfyrWLI"></script>
+<script>
+    
+    
+    function initMap(){
+    createMap();//创建地图
+    setMapEvent();//设置地图事件
+    addMapControl();//向地图添加控件
+    addMapOverlay();//向地图添加覆盖物
+}
+function createMap(){
+    map = new BMap.Map("map");
+    map.centerAndZoom(new BMap.Point(116.585748,38.085217),16);
+}
+function setMapEvent(){
+    map.enableScrollWheelZoom();
+    map.enableKeyboard();
+    map.enableDragging();
+    map.enableDoubleClickZoom()
+}
+function addClickHandler(target,window){
+    target.addEventListener("click",function(){
+        target.openInfoWindow(window);
+    });
+}
+function addMapOverlay(){
+    var markers = [
+        {content:"学校",title:"我的学校",imageOffset: {width:0,height:3},position:{lat:38.082761,lng:116.577627}}
+    ];
+    for(var index = 0; index < markers.length; index++ ){
+        var point = new BMap.Point(markers[index].position.lng,markers[index].position.lat);
+        var marker = new BMap.Marker(point,{icon:new BMap.Icon("http://api.map.baidu.com/lbsapi/createmap/images/icon.png",new BMap.Size(20,25),{
+            imageOffset: new BMap.Size(markers[index].imageOffset.width,markers[index].imageOffset.height)
+        })});
+        var label = new BMap.Label(markers[index].title,{offset: new BMap.Size(25,5)});
+        var opts = {
+            width: 200,
+            title: markers[index].title,
+            enableMessage: false
+        };
+        var infoWindow = new BMap.InfoWindow(markers[index].content,opts);
+        marker.setLabel(label);
+        addClickHandler(marker,infoWindow);
+        map.addOverlay(marker);
+    };
+}
+//向地图添加控件
+function addMapControl(){
+    var scaleControl = new BMap.ScaleControl({anchor:BMAP_ANCHOR_BOTTOM_LEFT});
+    scaleControl.setUnit(BMAP_UNIT_IMPERIAL);
+    map.addControl(scaleControl);
+    var navControl = new BMap.NavigationControl({anchor:BMAP_ANCHOR_TOP_LEFT,type:BMAP_NAVIGATION_CONTROL_LARGE});
+    map.addControl(navControl);
+    var overviewControl = new BMap.OverviewMapControl({anchor:BMAP_ANCHOR_BOTTOM_RIGHT,isOpen:true});
+    map.addControl(overviewControl);
+}
+var map;
+initMap();
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    var mySwiper = new Swiper(".swiper-container",{
+        
+      on:{
+      init: function(){
+        swiperAnimateCache(this); //隐藏动画元素 
+        swiperAnimate(this); //初始化完成开始动画
+      }, 
+      slideChangeTransitionEnd: function(){ 
+        swiperAnimate(this); //每个slide切换结束时也运行当前slide动画
+      } 
+    },
+        
+    
+        
+        direction:"vertical",
+        // Slides的滑动方向，可设置水平(horizontal)或垂直(vertical)
+        loop:true,
+        
+        pagination:{
+            el:".swiper-pagination",
+            clickable: true,
+        },
+        
+        navigation:{
+            nextEl: '.swiper-button-next',
+        },
+    })
+    
+    
+    var video=document.querySelector("video");
+    var music=document.querySelector(".music");
+    var stop=document.querySelector(".animat");
+    var stop1=document.querySelector(".m-s img");
+    var one=true;
+    music.onclick=function(){
+       if(one){
+            stop.className="";
+            video.pause();
+            one=false;
+            stop1.style.display="none";
+            
+       }else{
+           video.play();
+           stop.className="animat";
+           stop1.style.display="block";
+           one=true;   
+       }
+    }
+    
+    
+</script>
+
+</body>
+
+</html>

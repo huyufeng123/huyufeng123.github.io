@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=divice-width,user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0">
+    <link rel="stylesheet" href="Font-Awesome-4.7.0/css/font-awesome.min.css">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    .header {
+        width: 100%;
+        font-size: 12px;
+        position: fixed;
+        left: 0px;
+        top: 0px;
+    }
+    
+    a {
+        text-decoration: none;
+    }
+    
+    li {
+        float: left;
+        list-style: none;
+    }
+    
+    nav {
+        background: #fd6363;
+        height: 45px;
+    }
+    
+    h1 {
+        text-align: center;
+        line-height: 45px;
+        font-size: 18px;
+        color: #fff;
+        font-weight: normal;
+    }
+    
+    .title a {
+        display: inline-block;
+        width: 40px;
+        position: absolute;
+        height: 45px;
+    }
+    
+    .title i {
+        color: #fff;
+        line-height: 45px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .title strong{
+         font-weight: normal;
+    }
+    .title a:nth-of-type(1) {
+        position: absolute;
+        right: 0px;
+        top: 0px;
+    }
+    
+    .select-object .title {
+        text-align: center;
+        color: #333333;
+        padding: 0 15px;
+        height: 45px;
+    }
+    
+    .select-object h2 {
+        font-size: 15px;
+        height: 25px;
+        border-bottom: 1px solid #e2e2e2;
+    }
+    
+    .select-object strong {
+        height: 45px;
+        line-height: 45px;
+        background: #fff;
+        padding: 0 15px;
+    }
+    
+    .select-object .so-ul {
+        border-top: 1px solid #ebebeb;
+    }
+    
+    .select-object .so-li {
+        width: 33.3333%;
+        float: left;
+        height: 80px;
+        border-right: 1px solid #e2e2e2;
+        border-bottom: 1px solid #e2e2e2;
+    }
+    
+    .so-ul {
+        margin-bottom: 56px;
+    }
+    
+    .so-ul::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+    
+    .so-li a {
+        width: 100%;
+        height: 79px;
+        text-align: center;
+        display: inline-block;
+        border: 2px solid #fff;
+    }
+    
+    .so-li span {
+        display: block;
+        color: #666666;
+        margin-top: 8px;
+        line-height: 27px;
+    }
+    
+    .so-li i {
+        display: block;
+        font-style: normal;
+        color: #c1c1c1;
+        font-size: 12px;
+    }
+    
+    .bottombar {
+        border-top: 1px solid #e0e0e0;
+        padding-top: 8px;
+        padding-bottom: 1px;
+        position: fixed;
+        bottom: 0px;
+        width: 100%;
+        background: #fff;
+    }
+    
+    .uilink::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+    
+    .uilink li {
+        width: 25%;
+        text-align: center;
+    }
+    
+    .uilink i {
+        color: #999;
+        display: block;
+        font-size: 25px;
+    }
+    
+    .uilink li:nth-of-type(3) i,
+    .uilink li:nth-of-type(3) span {
+        color: #ff4e50;
+    }
+    
+    .uilink .i-t {
+        color: #999;
+        font-size: 12px;
+        position: relative;
+        top: -5px;
+    }
+    
+    .experience {
+        width: 100%;
+        height: 100vh;
+        background: #ff4e50;
+        text-align: center;
+    }
+    .by,.by2{
+        width: 100%;
+        height: 100vh;
+        display: none;
+    }
+    .ex-box {
+        position: relative;
+        top: 28%;
+    }
+    
+    .ex-box img {
+        display: block;
+        margin: auto;
+        width: 192px;
+    }
+    
+    #none {
+        display: none;
+    }
+    
+    .experience a {
+        width: 140px;
+        display: inline-block;
+        height: 38px;
+        background: #fff;
+        padding: 0px 34px;
+        line-height: 38px;
+        border-radius: 20px;
+        color: #ff4e50;
+        margin-top: 40px;
+    }
+    #box1 .title a,#box2 .title a{
+         position: absolute;
+         left: 0;
+         margin-left:0px;
+    }
+</style>
+
+<body>
+    <div id="ex" class="experience">
+        <div class="ex-box"><img src="img/3.png" alt=""> <a id="tiao" href="#">马上体验</a> </div>
+    </div>
+    <div id="none">
+        <div class="headbar">
+            <nav class="title">
+                <h1>猜心</h1> <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a> </nav>
+        </div>
+        <div id="ck1" class="select-object">
+            <div class="title"><strong>step1:你要送谁礼物？</strong></div>
+            <div id="all" class="so-ul">
+                <div class="so-li"><a href="#"><span>女朋友</span><i>girlfriend</i></a></div>
+                <div class="so-li"><a href="#"><span>男朋友</span><i>boyfriend</i></a></div>
+                <div class="so-li"><a href="#"><span>女生</span><i>girl</i></a></div>
+                <div class="so-li r-b"><a href="#"><span>男生</span><i>boy</i></a></div>
+                <div class="so-li"><a href="#"><span>老婆</span><i>wife</i></a></div>
+                <div class="so-li"><a href="#"><span>老公</span><i>husband</i></a></div>
+                <div class="so-li"><a href="#"><span>朋友</span><i>friend</i></a></div>
+                <div class="so-li"><a href="#"><span>同学</span><i>classmate</i></a></div>
+                <div class="so-li r-b"><a href="#"><span>老师</span><i>teacher</i></a></div>
+                <div class="so-li"><a href="#"><span>妈妈</span><i>mom</i></a></div>
+                <div class="so-li r-b"><a href="#"><span>爸爸</span><i>daddy</i></a></div>
+                <div class="so-li r-b"><a href="#"><span>长辈</span><i>elder</i></a></div>
+                <div class="so-li"><a href="#"><span>孩子</span><i>child</i></a></div>
+                <div class="so-li"><a href="#"><span>老人</span><i>grendparents</i></a></div>
+                <div class="so-li"><a href="#"><span>同事</span><i>colleague</i></a></div>
+                <div class="so-li"><a href="#"><span>领导</span><i>boss</i></a></div>
+                <div class="so-li"><a href="#"><span>客户</span><i>client</i></a></div>
+                <div class="so-li r-b"><a href="#"><span>姐姐</span><i>elder sister</i></a></div>
+                <div class="so-li r-b"><a href="#"><span>妹妹</span><i>younger sister</i></a></div>
+                <div class="so-li r-b"><a href="#"><span>哥哥</span><i>younger brother</i></a></div>
+                <div class="so-li r-b"><a href="#"><span>弟弟</span><i>younger brother</i></a></div>
+                <div class="so-li r-b"><a href="#"><span>外国人</span><i>foreigner</i></a></div>
+                <div class="so-li r-b"><a href="#"><span>其他人</span><i>other</i></a></div>
+            </div>
+        </div>
+        <div class="bottombar">
+            <ul class="uilink active">
+                <li>
+                    <a href="index.html"> <i class="fa fa-gift" aria-hidden="true"></i> <span class="i-t">首页</span> </a>
+                </li>
+                <li>
+                    <a href="gift.html"> <i class="fa fa-heart" aria-hidden="true"></i> <span class="i-t">礼物</span> </a>
+                </li>
+                <li>
+                    <a href="heart.html"> <i class="fa fa-bookmark" aria-hidden="true"></i> <span class="i-t">猜心</span> </a>
+                </li>
+                <li>
+                    <a href="#"> <i class="fa fa-commenting" aria-hidden="true"></i> <span class="i-t">攻略</span> </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="select-object by" id="box1">
+        <div class="headbar">
+            <nav class="title">
+                <a class="return" href=""><i class="fa fa-chevron-left" aria-hidden="true"></i></a>
+                <h1>猜心</h1>
+            </nav>
+        </div>
+        <div class="title">
+             <strong>step2:为啥送<span></span>礼物</strong>
+        </div>
+        <div class="so-ul">
+            <div class="so-li"><a href="#"><span>生日礼物</span></a></div>
+            <div class="so-li"><a href="#"><span>情人节</span></a></div>
+            <div class="so-li"><a href="#"><span>恋爱纪念日</span></a></div>
+            <div class="so-li"><a href="#"><span>表白示爱</span></a></div>
+            <div class="so-li r-b"><a href="#"><span>约会</span></a></div>
+            <div class="so-li r-b"><a href="#"><span>成年礼</span></a></div>
+            <div class="so-li r-b"><a href="#"><span>升学毕业</span></a></div>
+            <div class="so-li r-b"><a href="#"><span>感谢</span></a></div>
+            <div class="so-li r-b"><a href="#"><span>其他目的</span></a></div>
+        </div>
+    </div>
+    <div class="select-object by2" id='box2'>
+        <div class="headbar">
+            <nav class="title">
+                <a href=""><i class="fa fa-chevron-left" aria-hidden="true"></i></a>
+                <h1>猜心</h1>
+            </nav>
+        </div>
+        <div class="title">
+             <strong>step3:请选择<span></span>的年龄</strong>
+        </div>
+        <div class="so-ul">
+            <div class="so-li"><a href="#"><span>13-17岁</span><i>girlfriend</i></a></div>
+            <div class="so-li"><a href="#"><span>18-24岁</span><i>boyfriend</i></a></div>
+            <div class="so-li"><a href="#"><span>25-34岁</span><i>girl</i></a></div>
+            <div class="so-li r-b"><a href="#"><span>45-59岁</span><i>boy</i></a></div>
+        </div>
+    </div>
+    <script>
+        var tt=setTimeout(function(){
+            var t = document.querySelector("#tiao");
+            var z = document.querySelector("#none");
+            var e = document.querySelector(".experience");
+            e.style.display = "none";
+            z.style.display = "block";
+        }, 5000);
+        var t = document.querySelector("#tiao");
+        var z = document.querySelector("#none");
+        var e = document.querySelector(".experience");
+        t.onclick = function () {
+            clearInterval(tt);
+            e.style.display = "none";
+            z.style.display = "block";
+        }
+        var none=document.querySelector('#none');
+        var a1=none.querySelectorAll('a');
+        var box1=document.querySelector("#box1");
+        var span1=box1.querySelector(".title span");
+        var a2=box1.querySelectorAll("a");
+        var box2=document.querySelector("#box2");
+        var span2=box2.querySelector(".title span");
+        var a3=box2.querySelectorAll("a");
+        var span;
+        var r=document.querySelector(".return");
+        for(var i=0;i<a1.length;i++){
+            a1[i].index=i;
+            a1[i].onclick=function(){
+                span=a1[this.index].querySelector("span");
+                none.style.display="none";
+                box1.style.display="block";
+                span1.innerHTML=span.innerHTML;
+            } 
+        }
+        
+        for(var i=0;i<a2.length;i++){
+            a2[i].index=i;
+            a2[i].onclick=function(){
+                box1.style.display="none";
+                box2.style.display="block";
+                span2.innerHTML=span.innerHTML;
+            }
+        }
+        for(var i=0;i<a3.length;i++){
+            a3[i].index=i;
+            a3[i].onclick=function(){
+                box2.style.display="none";
+                none.style.display="block";
+//                span1.innerHTML=span.innerHTML;
+            }
+        }
+        r.onclick=function(){
+            
+        }
+    </script>
+</body>
+
+</html>

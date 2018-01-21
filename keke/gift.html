@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+    content="width=divice-width,user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0">
+    <link rel="stylesheet" href="Font-Awesome-4.7.0/css/font-awesome.min.css">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    .headbar{
+        width: 100%;
+        font-size: 12px;
+        position: fixed;
+        left: 0px;
+        top: 0px;
+    }
+    a{
+        text-decoration: none;
+    }
+    li{
+        float: left;
+        list-style: none;
+    }
+    nav{
+        background: #fd6363;
+        height: 45px;
+        
+    }
+    .title h1{
+        text-align: center;
+        font-size: 18px;
+        font-weight: normal;
+        color: #fff;
+        line-height: 45px;
+    }
+    .title a{
+        display: inline-block;
+        width: 40px;
+        position: absolute;
+        height: 45px;
+        
+    }
+    .title i{
+        font-size: 22px;
+        color: #fff;
+        line-height: 45px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .title a:nth-of-type(1){
+        position: absolute;
+        left: 0px;
+        
+    }
+    .title a:nth-of-type(2){
+        position: absolute;
+        right:0px;
+        top: 0px;
+    }
+    .search-links{
+        height: 45px;
+        border-bottom: 1px solid #e6e6e6;
+        background: #fff;
+        
+    }
+    .search-links a{
+        display: block;
+        line-height: 45px;
+        padding-left: 10px;
+        color: #666;
+    }
+    .search-links .ico-right{
+        float: right;
+        font-size: 25px;
+        line-height: 45px;
+        padding-right: 12px;
+        color: #999;
+    }
+    .search-links .text{
+        font-size: 14px;
+    }
+    .search-links .ico-left{
+        color: #ff4e50;
+        margin-right: 5px;
+        font-size: 20px;
+        line-height: 45px;
+        position: relative;
+        top: 2px;
+    }
+    .type-index{
+        display: inline-block;
+    }
+    .category_list{
+        width: 20%;
+        float: left;
+        position: fixed;
+        left: 0px;
+        top: 90px;
+    }
+    .category_list ul{
+        content:"";
+        display: table;
+        clear: both;
+    }
+    .category_list li{
+        text-align: center;
+        border-left: 3px solid #f5f5f5;
+        width: 100%;
+        background: #f6f6f6;
+    }
+    .category_list a{
+        font-size: 14px;
+        line-height: 52px;
+        color: #666;
+        display: block;
+        
+    }
+    .category_content{
+        width: 80%;
+        padding: 20px;
+        float:  right;
+        margin-top: 90px;
+        
+    }
+    .category_content a{
+        width: 23.33333%;
+        float: left;
+        text-align: center;
+        margin-right: 15%;
+        margin-bottom: 15px;
+    }
+    .category_content .img{
+        display: block;
+    }
+    .category_content img{
+        width: 100%;
+    }
+    .category_content a:nth-of-type(3n){
+        margin-right: 0;
+    }
+    .category_content .name{
+        font-size: 12px;
+        font-size: #666;
+    }
+    .bottombar{
+        border-top: 1px solid #e0e0e0;
+        padding-top: 8px;
+        padding-bottom: 1px;
+        position:fixed;
+        bottom: 0px;
+        width: 100%; 
+        background: #fff;
+    }
+    .uilink::after{
+        content: "";
+        clear: both;
+        display: table;
+    }
+    .uilink li{
+        width: 25%;
+        text-align: center;
+        
+    }
+    .uilink i{
+        color: #999;
+        display: block;
+        font-size: 25px;
+    }
+    .uilink li:nth-of-type(2) i,
+    .uilink li:nth-of-type(2) span{
+        color: #ff4e50;
+    }
+    .uilink .i-t{
+        color:#999;
+        font-size: 12px;
+        position: relative;
+        top: -5px;
+    }
+    #app2,#app3{
+        display: none;
+    }
+</style>
+<body>
+    <div class="headbar">
+        <nav class="title">
+            <a href="#"><i class="fa fa-chevron-left" aria-hidden="true"></i></a>
+            <h1>礼物</h1>
+            <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
+        </nav>
+        <div class="search-links">
+            <a href="#">
+                <span class="text"><i class="fa fa-gratipay ico-left" aria-hidden="true"></i>猜心 - 选礼神器 快速挑礼</span>
+                <i class="fa fa-angle-right ico-right" aria-hidden="true"></i>
+            </a>
+        </div>
+    </div>
+    <div class="type-index">
+        <div class="category_list">
+            <ul id="clicking">
+                <li><a href="#">热门</a></li>
+                <li><a href="#">数码</a></li>
+                <li><a href="#">配饰</a></li>
+                <li><a href="#">饰品</a></li>
+                <li><a href="#">玩具</a></li>
+                <li><a href="#">创意</a></li>
+                <li><a href="#">百货</a></li>
+                <li><a href="#">综合</a></li>
+                <li><a href="#">对象</a></li>
+                <li><a href="#">场景</a></li>
+                <li><a href="#">节日</a></li>
+            </ul>
+        </div>
+        <div id="app1" class="category_content">
+            <mydiv></mydiv>
+        </div>
+        <div id="app2" class="category_content">
+            <mydiv2></mydiv2>
+        </div>
+        <div id="app3" class="category_content">
+            <mydiv3></mydiv3>
+        </div>
+    </div>
+    <div class="bottombar">
+            <ul class="uilink active">
+                <li><a href="index.html">
+                    <i class="fa fa-gift" aria-hidden="true"></i>
+                    <span class="i-t">首页</span>
+                </a></li>
+                <li><a href="gift.html">
+                    <i class="fa fa-heart" aria-hidden="true"></i>
+                    <span class="i-t">礼物</span>
+                </a></li>
+                <li><a href="heart.html">
+                    <i class="fa fa-bookmark" aria-hidden="true"></i>
+                    <span class="i-t">猜心</span>
+                </a></li>
+                <li><a href="#">
+                    <i class="fa fa-commenting" aria-hidden="true"></i>
+                    <span class="i-t">攻略</span>
+                </a></li>
+            </ul>
+    </div>
+    <script src="jQuery/jquery-1.11.1.min.js"></script>
+    <script src="js/vue.min.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+        var clicking=document.querySelectorAll("#clicking li");
+        var app1=document.querySelector("#app1");
+        var app2=document.querySelector("#app2");
+        var app3=document.querySelector("#app3");
+        clicking[0].style.borderLeftColor="#fd6363";
+        clicking[0].style.background="#fff";
+        clicking[0].onclick=function(){
+            app1.style.display="block";
+            app2.style.display="none";
+            app3.style.display="none";
+            this.style.borderLeftColor="#fd6363";
+            this.style.background="#fff";
+            clicking[1].style.background="#f6f6f6";
+            clicking[2].style.background="#f6f6f6";
+            clicking[1].style.borderLeftColor="#f6f6f6";
+            clicking[2].style.borderLeftColor="#f6f6f6";
+        }
+        clicking[1].onclick=function(){
+            app1.style.display="none";
+            app2.style.display="block";
+            app3.style.display="none"; 
+            this.style.borderLeftColor="#fd6363";
+            this.style.background="#fff";
+            clicking[0].style.background="#f6f6f6";
+            clicking[2].style.background="#f6f6f6";
+            clicking[0].style.borderLeftColor="#f6f6f6";
+            clicking[2].style.borderLeftColor="#f6f6f6";
+        }
+        clicking[2].onclick=function(){
+            app1.style.display="none";
+            app2.style.display="none";
+            app3.style.display="block"; 
+            this.style.borderLeftColor="#fd6363";
+            this.style.background="#fff";
+            clicking[0].style.background="#f6f6f6";
+            clicking[1].style.background="#f6f6f6";
+            clicking[0].style.borderLeftColor="#f6f6f6";
+            clicking[1].style.borderLeftColor="#f6f6f6";
+            
+        }
+    </script>
+    
+</body>
+</html>

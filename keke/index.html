@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+    content="width=divice-width,user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0">
+    <link rel="stylesheet" href="Font-Awesome-4.7.0/css/font-awesome.min.css">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    header{
+        width: 100%;
+        font-size: 12px;
+    }
+    a{
+        text-decoration: none;
+    }
+    li{
+        float: left;
+        list-style: none;
+    }
+    .header-bg1{
+        background: url(img/1.png) repeat-x; 
+        width: 100%;
+        height: 6px;
+    }
+    .logo{
+        text-align: center;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .logo img{
+        width: 185px;
+        height: 56px;
+    }
+    .search{
+        text-align: center;
+        height: 36px;
+        margin-bottom: 36px;
+    }
+    .search input{
+        width: 83%;
+        height: 34px;
+        border-radius: 20px;
+        border: 1px solid #cccccc;
+        padding:4px 0px 4px 18px;
+        font-size: 14px;
+        outline:none;
+        
+    }
+    .search-tab{
+        border-left: 1px solid #ccc;
+        width: 35px;
+        height: 24px;
+        position: relative;
+        left: 78%;
+        top: -29px;
+        
+    }
+    .search-tab img{
+        margin-top: 3px;
+        width: 18px;
+        height: 18px;
+        margin-left: 16px;
+    }
+    .nav-menu{
+        text-align: center;
+        padding-bottom: 30px;
+        border-bottom: 10px solid #f4f4f4;
+        width: 100%;
+    }
+    .nav-menu,.nav-menu a{
+        display: inline-block;
+    }
+    .nav-menu ul{
+        display: block;
+        height: 70px;
+    }
+    .nav-menu ul::after,
+    .nav-tab ul::after,
+    .index-box::after,
+    .select-object::after{
+        display: table;
+        content: "";
+        clear: both;
+    }
+    .nav-menu li{
+        width: 25%;
+        text-align: center;
+    }
+   
+    .ico1,.ico2,.ico3,.ico4{
+        width: 50px;
+        height: 50px;
+        border-radius: 25px;
+        
+    }
+    .ico1 i,.ico2 i,.ico3 i,.ico4 i{
+        font-size: 26px;
+        line-height: 50px;
+        color: #fff;
+    }
+    .nav-menu .ico1{
+        background: #f9b83a;
+    }
+    .nav-menu .ico2{
+        background: #fd6363;
+    }
+    .nav-menu .ico3{
+        background: #7ad38d;
+    }
+    .nav-menu .ico4{
+        background: #29a6fe;
+    }
+    .nav-menu span{
+        display: block;
+    }
+    .nav-menu .i-t{
+        margin-top: 4px;
+    }
+    .nav-tab li{
+        width: 25%;
+        text-align: center;
+        height: 45px;
+    }
+    .navbar a{
+        padding: 15px 5px 12px 5px;
+        display: inline-block;
+        color: #666666;
+    }
+    .navbar li a{
+        border-bottom:2px solid #fff;
+    }
+    .index-box{
+        border-top: 1px solid #e0e0e0;
+        border-bottom: 15px solid #f4f4f4;
+        display:block;
+    }
+    .img-left{
+        border-right: 1px solid #e1e1e1;
+    }
+    .img-left,.img-right{
+        width: 50%;
+        float: left;
+        padding: 10px 10px 0px 10px;
+        text-align: center;
+    }
+    .img-tu{
+        margin-bottom: 10px;
+    }
+    .img-left .img-tu:nth-of-type(1){
+        background: url(img/tu-1.jpg) no-repeat;
+        background-size: 80px;
+    }
+    .img-left .img-tu:nth-of-type(2){
+        background: url(img/tu-2.jpg) no-repeat;
+        background-size: 80px;
+    }
+    .img-left .img-tu:nth-of-type(3){
+        background: url(img/tu-3.jpg) no-repeat;
+        background-size: 80px;
+    }
+    .img-left .img-tu:nth-of-type(4){
+        background: url(img/tu-4.jpg) no-repeat;
+        background-size: 80px;
+    }
+    .img-left .img-tu:nth-of-type(5){
+        background: url(img/tu-5.jpg) no-repeat;
+        background-size: 80px;
+    }
+    .img-right .img-tu:nth-of-type(1){
+        background: url(img/tu-6.jpg) no-repeat;
+        background-size: 80px;
+    }
+    .img-right .img-tu:nth-of-type(2){
+        background: url(img/tu-7.jpg) no-repeat;
+        background-size: 80px;
+    }
+    .img-right .img-tu:nth-of-type(3){
+        background: url(img/tu-8.jpg) no-repeat;
+        background-size: 80px;
+    }
+    .img-right .img-tu:nth-of-type(4){
+        background: url(img/tu-9.jpg) no-repeat;
+        background-size: 80px;
+    }
+    .img-right .img-tu:nth-of-type(5){
+        background: url(img/tu-10.jpg) no-repeat;
+        background-size: 80px;
+    }
+    .img-tu a{
+        display: block;
+        height: 80px;
+    }
+    .img-tu span{
+        display: block;
+        margin-left: 90px;
+        line-height: 26px;
+        text-align: left;
+    }
+    .img-tu span:nth-of-type(1){
+        font-size: 14px;
+        color: #666;
+        padding-top: 3px;
+    }
+    .img-tu span:nth-of-type(2){
+        color: #999;
+    }
+    .select-object{
+        border-bottom: 14px solid #f4f4f4;
+    }
+    .select-object .title{
+        text-align: center;
+        color: #333333;
+        padding: 0 15px;
+        height: 45px;
+    }
+    .select-object h2{
+        font-size: 15px;
+        height: 25px;
+        border-bottom: 1px solid #e2e2e2;
+    }
+    .select-object strong{
+        height: 45px;
+        line-height: 45px;
+        background: #fff;
+        padding: 0 15px;
+    }
+    .select-object .so-ul{
+        border-top: 1px solid #ebebeb;
+    }
+    .select-object .so-li{
+        width: 25%;
+        float: left;
+        height: 80px;
+        border-right: 1px solid #e2e2e2;
+        border-bottom: 1px solid #e2e2e2;
+    }
+    .select-object .r-b{
+        border-right-style: none;
+    }
+    .so-li a{
+        width: 100%;
+        height: 79px;
+        text-align: center;
+        display: inline-block;
+        border: 2px solid #fff;
+        
+    }
+    .so-li span{
+        display: block;
+        color: #666666;
+        margin-top: 8px;
+        line-height: 27px;
+    }
+    .so-li i{
+        display: block;
+        font-style: normal;
+        color: #c1c1c1;
+    }
+    .navbar2{
+        width: 100%;
+        overflow: hidden;
+    }
+    .ul2{
+        transition-duration: 0.3s;
+        transform: translate3d(0px, 0px, 0px);
+        padding-left: 0px;
+        padding-right: 10px;
+        width: 540px;
+        height: 45px;
+        
+    }
+    .ul2 li{
+        width: 60px !important;
+    }
+    .ul2 a{
+    height: 27px;
+    line-height: 26px;
+    display: inline-block;
+    padding: 10px 5px 6px 5px;
+    border-bottom: 3px solid #FFF;
+    font-size: 14px;
+    color: #666;
+    }
+    .article{
+        padding: 10px;
+        
+    }
+    .imgbox{
+        width: 100%;
+        text-align: center;
+    }
+    .imgbox a{
+        display: inline-block;
+        font-size: 16px;
+        color: #737373;
+    }
+    .imgbox img{
+        width: 100%;
+        margin-bottom: 8px;
+    }
+    .btn{
+        margin-top: 8px;
+        margin-bottom: 10px;
+    }
+    .btn strong{
+        font-size: 14px;
+        color: #c1c1c1;
+        font-weight: bold;
+    }
+    .btn i{
+        color: #c1c1c1;
+        font-size: 20px;
+        margin-right: 5px;
+    }
+    .icon-view{
+        margin-right: 20px;
+    }
+    .bottombar{
+        border-top: 1px solid  #e0e0e0;
+        padding-top: 8px;
+        padding-bottom: 6px;
+        position:fixed;
+        bottom: 0px;
+        width: 100%; 
+        background: #fff;
+        
+        
+    }
+    .uilink::after{
+        content: "";
+        clear: both;
+        display: table;
+    }
+    .uilink li{
+        width: 25%;
+        text-align: center;
+        
+    }
+    .uilink i{
+        color: #999;
+        display: block;
+        font-size: 25px;
+    }
+    .uilink li:nth-of-type(1) i,
+    .uilink li:nth-of-type(1) span{
+        color: #ff4e50;
+    }
+    .uilink .i-t{
+        color:#999;
+    }
+</style>
+<body>
+   <header>
+       <div class="header-bg1">
+           
+       </div>
+        <div class="logo">
+            <img src="img/logo.png" alt="">
+        </div>
+        <div class="search">
+            <input placeholder="搜索礼物" type="text">
+            <div class="search-tab">
+                <img src="img/2.png" alt="">
+            </div>
+        </div>
+        <div class="nav-menu">
+            <ul>
+                <li><a href="#">
+                    <span class="ico1"><i class="fa fa-gift" aria-hidden="true"></i></span>
+                    <span class="i-t">礼物</span>
+                </a></li>
+                <li><a href="heart.html">
+                    <span class="ico2"><i class="fa fa-heart" aria-hidden="true"></i></span>
+                    <span class="i-t">猜心</span>
+                </a></li>
+                <li><a href="#">
+                    <span class="ico3"><i class="fa fa-bookmark" aria-hidden="true"></i></span>
+                    <span class="i-t">攻略</span>
+                </a></li>
+                <li><a href="#">
+                    <span class="ico4"><i class="fa fa-commenting" aria-hidden="true"></i></span>
+                    <span class="i-t">问答</span>
+                </a></li>
+            </ul>
+        </div>
+        <div class="nav-tab">
+            <!--导航栏-->
+            <div class="navbar">
+                <ul>
+                    <li class="clicking"><a href="#">送女性</a></li>
+                    <li class="clicking"><a href="#">送男性</a></li>
+                    <li class="clicking"><a href="#">婚恋</a></li>
+                    <li class="clicking"><a href="#">综合</a></li>
+                </ul>
+            </div>
+            <!--索引盒-->
+            <div class="index-box">
+                <div class="img-left">
+                    <div class="img-tu"><a href="#">
+                        <span>阳光罐</span>
+                        <span>存储爱和幸福</span>
+                    </a></div>
+                    <div class="img-tu"><a href="#">
+                        <span>手链</span>
+                        <span>手腕上的爱恋</span>
+                    </a></div>
+                    <div class="img-tu"><a href="#">
+                        <span>水晶礼物</span>
+                        <span>定制照片祝福语</span>
+                    </a></div>
+                    <div class="img-tu"><a href="#">
+                        <span>零食礼包</span>
+                        <span>吃货的最爱</span>
+                    </a></div>
+                    <div class="img-tu"><a href="#">
+                        <span>健康按摩</span>
+                        <span>送礼送健康</span>
+                    </a></div>
+                </div>
+                <div class="img-right">
+                    <div class="img-tu"><a href="#">
+                        <span>巧克力</span>
+                        <span>永不过时的浪漫 </span>
+                    </a></div>
+                    <div class="img-tu"><a href="#">
+                        <span>项链</span>
+                        <span>寓意“相恋”</span>
+                    </a></div>
+                    <div class="img-tu"><a href="#">
+                        <span>毛绒玩具</span>
+                        <span>给她安全感</span>
+                    </a></div>
+                    <div class="img-tu"><a href="#">
+                        <span>音乐盒</span>
+                        <span>最经典的礼物</span>
+                    </a></div>
+                    <div class="img-tu"><a href="#">
+                        <span>竹简情书</span>
+                        <span>表白示爱神器</span>
+                    </a></div>
+                </div>
+            </div>
+            <!--索求对象-->
+            <div class="select-object">
+                <div class="title">
+                    <h2>
+                        <strong>你要送谁礼物？</strong>
+                    </h2>
+                </div>
+                <div class="so-ul">
+                    <div class="so-li"><a href="#"><span>女朋友</span><i>girlfriend</i></a></div>
+                    <div class="so-li"><a href="#"><span>男朋友</span><i>boyfriend</i></a></div>
+                    <div class="so-li"><a href="#"><span>女生</span><i>girl</i></a></div>
+                    <div class="so-li r-b"><a href="#"><span>男生</span><i>boy</i></a></div>
+                    <div class="so-li"><a href="#"><span>老婆</span><i>wife</i></a></div>
+                    <div class="so-li"><a href="#"><span>老公</span><i>husband</i></a></div>
+                    <div class="so-li"><a href="#"><span>妈妈</span><i>mom</i></a></div>
+                    <div class="so-li r-b"><a href="#"><span>爸爸</span><i>daddy</i></a></div>
+                    <div class="so-li"><a href="#"><span>同学</span><i>classmate</i></a></div>
+                    <div class="so-li"><a href="#"><span>闺蜜</span><i>bestie</i></a></div>
+                    <div class="so-li"><a href="#"><span>朋友</span><i>friend</i></a></div>
+                    <div class="so-li r-b"><a href="#"><span>老师</span><i>teacher</i></a></div>
+                    <div class="so-li"><a href="#"><span>同事</span><i>colleague</i></a></div>
+                    <div class="so-li"><a href="#"><span>客户</span><i>client</i></a></div>
+                    <div class="so-li"><a href="#"><span>领导</span><i>boss</i></a></div>
+                    <div class="so-li r-b"><a href="#"><span>更多</span><i>more</i></a></div>
+                </div>
+            </div>
+            <div class="navbar2">
+                <ul class="ul2">
+                    <li><a href="#">送女性</a></li>
+                    <li><a href="#">送男性</a></li>
+                    <li><a href="#">婚恋</a></li>
+                    <li><a href="#">综合</a></li>
+                    <li><a href="#">送女性</a></li>
+                    <li><a href="#">送男性</a></li>
+                    <li><a href="#">婚恋</a></li>
+                    <li><a href="#">综合</a></li>
+                </ul>
+                <div class="article">
+                    <div class="imgbox">
+                        <a href="#">
+                            <img src="img/11.jpg" alt="">
+                        </a>
+                        <a class="textbox" href="">十种礼物轻松化解感情危机</a>
+                        <div class="btn">
+                            <strong class="icon-view"><i class="fa fa-eye" aria-hidden="true"></i>83</strong>
+                            <strong class="icon-like"><i class="fa fa-thumbs-up" aria-hidden="true"></i>2</strong>
+                        </div>
+                    </div>
+                    <div class="imgbox">
+                        <a href="#">
+                            <img src="img/12.jpg" alt="">
+                        </a>
+                        <a class="textbox" href="">十种礼物轻松化解感情危机</a>
+                        <div class="btn">
+                            <strong class="icon-view"><i class="fa fa-eye" aria-hidden="true"></i>83</strong>
+                            <strong class="icon-like"><i class="fa fa-thumbs-up" aria-hidden="true"></i>2</strong>
+                        </div>
+                    </div>
+                    <div class="imgbox">
+                        <a href="#">
+                            <img src="img/13.jpg" alt="">
+                        </a>
+                        <a class="textbox" href="">十种礼物轻松化解感情危机</a>
+                        <div class="btn">
+                            <strong class="icon-view"><i class="fa fa-eye" aria-hidden="true"></i>83</strong>
+                            <strong class="icon-like"><i class="fa fa-thumbs-up" aria-hidden="true"></i>2</strong>
+                        </div>
+                    </div>
+                    <div class="imgbox">
+                        <a href="#">
+                            <img src="img/14.jpg" alt="">
+                        </a>
+                        <a class="textbox" href="">十种礼物轻松化解感情危机</a>
+                        <div class="btn">
+                            <strong class="icon-view"><i class="fa fa-eye" aria-hidden="true"></i>83</strong>
+                            <strong class="icon-like"><i class="fa fa-thumbs-up" aria-hidden="true"></i>2</strong>
+                        </div>
+                    </div>
+                    <div class="imgbox">
+                        <a href="#">
+                            <img src="img/15.jpg" alt="">
+                        </a>
+                        <a class="textbox" href="">十种礼物轻松化解感情危机</a>
+                        <div style="margin-bottom:54px;" class="btn">
+                            <strong class="icon-view"><i class="fa fa-eye" aria-hidden="true"></i>83</strong>
+                            <strong class="icon-like"><i class="fa fa-thumbs-up" aria-hidden="true"></i>2</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bottombar">
+            <ul class="uilink active">
+                <li><a href="index.html">
+                    <i class="fa fa-gift" aria-hidden="true"></i>
+                    <span class="i-t">首页</span>
+                </a></li>
+                <li><a href="gift.html">
+                    <i class="fa fa-heart" aria-hidden="true"></i>
+                    <span class="i-t">礼物</span>
+                </a></li>
+                <li><a href="heart.html">
+                    <i class="fa fa-bookmark" aria-hidden="true"></i>
+                    <span class="i-t">猜心</span>
+                </a></li>
+                <li><a href="#">
+                    <i class="fa fa-commenting" aria-hidden="true"></i>
+                    <span class="i-t">攻略</span>
+                </a></li>
+            </ul>
+        </div>
+    </header>
+    <script>
+        var cl=document.querySelectorAll(".clicking a");
+        cl[0].style.borderBottomColor="#fd6363";
+        cl[0].onclick=function(){
+            this.style.borderBottomColor="#fd6363";
+            cl[1].style.borderBottomColor="#fff";
+            cl[2].style.borderBottomColor="#fff";
+            cl[3].style.borderBottomColor="#fff";
+        }
+        cl[1].onclick=function(){
+            this.style.borderBottomColor="#fd6363";
+            cl[0].style.borderBottomColor="#fff";
+            cl[2].style.borderBottomColor="#fff";
+            cl[3].style.borderBottomColor="#fff";
+        }
+        cl[2].onclick=function(){
+            this.style.borderBottomColor="#fd6363";
+            cl[0].style.borderBottomColor="#fff";
+            cl[1].style.borderBottomColor="#fff";
+            cl[3].style.borderBottomColor="#fff";
+        }
+        cl[3].onclick=function(){
+            this.style.borderBottomColor="#fd6363";
+            cl[0].style.borderBottomColor="#fff";
+            cl[2].style.borderBottomColor="#fff";
+            cl[1].style.borderBottomColor="#fff";
+        }
+    </script>
+</body>
+</html>
